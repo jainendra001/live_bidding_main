@@ -96,7 +96,7 @@ Frontend .env:
 
 ```
 
-VITE_API_URL=https://live-bidding-backend.vercel.app/
+VITE_API_URL=https://live-bidding-backend-zl9m.onrender.com
 
 ```
 
