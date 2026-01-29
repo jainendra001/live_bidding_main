@@ -9,8 +9,8 @@ Real-time auction platform with WebSocket bidding, race condition prevention, an
 
 ## Live Demo
 
-- Frontend: [Deploy Link - TBD]
-- Backend API: [Deploy Link - TBD]
+- Frontend: [Deploy Link](https://live-bidding-frontend-sigma.vercel.app/)
+- Backend API: [Deploy Link](https://live-bidding-backend-zl9m.onrender.com)
 
 ## Features
 
@@ -30,7 +30,7 @@ Frontend: React 18, Vite, Socket.io-client
 Infrastructure: Docker, Docker Compose
 
 ## Project Structure
-
+```
 live_bidding_backend/
 ├── data/items.js
 ├── routes/items.js
@@ -41,7 +41,7 @@ live_bidding_backend/
 live_bidding_frontend/
 ├── src/App.jsx
 └── Dockerfile
-
+```
 ## Quick Start
 
 ### Docker
@@ -113,6 +113,15 @@ Frontend on Vercel:
 - Framework: Vite
 - Build: npm run build
 - Set VITE_API_URL environment variable
+
+## Future Prospects
+
+- Database persistence
+- JWT authentication
+- Bid history
+- Email notifications
+- Automated testing
+- CI/CD pipeline
 
 ## Author
 
