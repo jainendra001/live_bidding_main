@@ -1,0 +1,3 @@
+[submodule "auction_bidding_frontend"]
+	path = auction_bidding_frontend
+	url = https://github.com/jainendra001/live_bidding_frontend.git
