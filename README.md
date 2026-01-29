@@ -87,8 +87,8 @@ Backend .env:
 ```
 
 PORT=3000
-FRONTEND_URL=http://localhost:5173
-NODE_ENV=development
+FRONTEND_URL=https://live-bidding-frontend-sigma.vercel.app
+NODE_ENV=production
 
 ```
 
@@ -96,7 +96,7 @@ Frontend .env:
 
 ```
 
-VITE_API_URL=http://localhost:3000
+VITE_API_URL=https://live-bidding-backend.vercel.app/
 
 ```
 
