@@ -1,77 +1,117 @@
+```markdown
 # Live Bidding Platform
 
-**Real-time auction platform with WebSocket bidding, race condition prevention, and server-synchronized timers.**
+Real-time auction platform with WebSocket bidding, race condition prevention, and server-synchronized timers.
 
-This is my submission for the Live Bidding Platform technical assessment.
+## Repositories
 
----
-
-## Repository Links
-
-**Main Repository:** [live_bidding_main](https://github.com/YOUR_USERNAME/live_bidding_main)
-
-**Individual Components:**
-
-1. **Backend:** [live_bidding_backend](https://github.com/YOUR_USERNAME/live_bidding_backend)
-2. **Frontend:** [live_bidding_frontend](https://github.com/YOUR_USERNAME/live_bidding_frontend)
-
----
+- Backend: [live_bidding_backend](https://github.com/jainendra001/live_bidding_backend)
+- Frontend: [live_bidding_frontend](https://github.com/jainendra001/live_bidding_frontend)
 
 ## Live Demo
 
-- **Frontend:** [https://your-app.vercel.app](https://your-app.vercel.app)
-- **Backend API:** [https://your-api.onrender.com](https://your-api.onrender.com)
+- Frontend: [Deploy Link - TBD]
+- Backend API: [Deploy Link - TBD]
 
----
+## Features
 
-## Features Implemented
+- REST API for auction items
+- Real-time bidding with Socket.io
+- Race condition prevention
+- Server-synced countdown timers
+- Visual feedback on bid updates
+- Username tracking
+- Auction expiration validation
+- Docker containerization
 
-### Core Requirements
+## Tech Stack
 
-- **REST API:** `GET /items` returns auction items with current bid and end time
-- **Real-Time Bidding:** Socket.io for instant bid updates across all clients
-- **Race Condition Prevention:** Lock mechanism ensures only one bid per item processes at a time
-- **Server Time Sync:** Countdown timers synced to server time (prevents client-side manipulation)
-- **Visual Feedback:**
-  - Green flash animation on bid updates
-  - "WINNING" badge when you're the highest bidder
-  - "OUTBID" badge when someone outbids you
-- **Auction Expiration:** Automatically rejects bids after auction ends
-- **Docker Support:** Full containerization with Docker Compose
+Backend: Node.js, Express, Socket.io  
+Frontend: React 18, Vite, Socket.io-client  
+Infrastructure: Docker, Docker Compose
 
-### Additional Features
+## Project Structure
 
-- Username registration and tracking
-- Display last bidder name
-- Modular backend architecture (routes, socket handlers, data models)
-- Environment variable configuration
-- Production-optimized Docker images
-- Health checks and restart policies
+live_bidding_backend/
+├── data/items.js
+├── routes/items.js
+├── socket/bidHandler.js
+├── auction.js
+└── Dockerfile
 
----
+live_bidding_frontend/
+├── src/App.jsx
+└── Dockerfile
 
-## Architecture
+## Quick Start
 
-### Tech Stack
+### Docker
+```
 
-**Backend:**
+git clone https://github.com/jainendra001/live_bidding_backend.git
+git clone https://github.com/jainendra001/live_bidding_frontend.git
+docker-compose up --build
 
-- Node.js + Express (REST API)
-- Socket.io (WebSocket real-time communication)
-- In-memory data store (extensible to database)
+```
 
-**Frontend:**
+Access at http://localhost:5173
 
-- React 18
-- Vite (build tool)
-- Socket.io-client
-- Inline styles (production-ready)
+### Local Development
 
-**Infrastructure:**
+Backend:
+```
 
-- Docker + Docker Compose
-- Multi-stage builds for optimized images
+cd live_bidding_backend
+npm install
+cp .env.example .env
+node auction.js
 
----
+```
 
-## 📁 Project Structure
+Frontend:
+```
+
+cd live_bidding_frontend
+npm install
+cp .env.example .env
+npm run dev
+
+```
+
+## Configuration
+
+Backend .env:
+```
+
+PORT=3000
+FRONTEND_URL=http://localhost:5173
+NODE_ENV=development
+
+```
+
+Frontend .env:
+```
+
+VITE_API_URL=http://localhost:3000
+
+```
+
+## Deployment
+
+Backend on Render:
+- Build: npm install
+- Start: node auction.js
+- Set FRONTEND_URL environment variable
+
+Frontend on Vercel:
+- Framework: Vite
+- Build: npm run build
+- Set VITE_API_URL environment variable
+
+## Author
+
+Jainendra Tripathy
+GitHub: [@jainendra001](https://github.com/jainendra001)
+
+Submission Date: January 29, 2026
+```
