@@ -1,4 +1,3 @@
-```markdown
 # Live Bidding Platform
 
 Real-time auction platform with WebSocket bidding, race condition prevention, and server-synchronized timers.
@@ -46,6 +45,7 @@ live_bidding_frontend/
 ## Quick Start
 
 ### Docker
+
 ```
 
 git clone https://github.com/jainendra001/live_bidding_backend.git
@@ -59,6 +59,7 @@ Access at http://localhost:5173
 ### Local Development
 
 Backend:
+
 ```
 
 cd live_bidding_backend
@@ -69,6 +70,7 @@ node auction.js
 ```
 
 Frontend:
+
 ```
 
 cd live_bidding_frontend
@@ -81,6 +83,7 @@ npm run dev
 ## Configuration
 
 Backend .env:
+
 ```
 
 PORT=3000
@@ -90,6 +93,7 @@ NODE_ENV=development
 ```
 
 Frontend .env:
+
 ```
 
 VITE_API_URL=http://localhost:3000
@@ -99,11 +103,13 @@ VITE_API_URL=http://localhost:3000
 ## Deployment
 
 Backend on Render:
+
 - Build: npm install
 - Start: node auction.js
 - Set FRONTEND_URL environment variable
 
 Frontend on Vercel:
+
 - Framework: Vite
 - Build: npm run build
 - Set VITE_API_URL environment variable
@@ -114,4 +120,3 @@ Jainendra Tripathy
 GitHub: [@jainendra001](https://github.com/jainendra001)
 
 Submission Date: January 29, 2026
-```
